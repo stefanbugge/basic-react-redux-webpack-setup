@@ -1,6 +1,8 @@
 # basic-react-redux-webpack-setup
 
-Basic webpack setup configured with React, Redux and Sass
+Basic webpack setup configured with React, Redux and Sass.
+
+Make sure you have an npm version >= 3
 
 ### Install dependencies
 
