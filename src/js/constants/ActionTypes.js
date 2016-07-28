@@ -1,0 +1,2 @@
+
+export const GREETING_ACTION = "GREETING_ACTION"
