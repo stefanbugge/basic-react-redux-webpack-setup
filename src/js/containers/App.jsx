@@ -10,7 +10,12 @@ import * as GreetingActions from '../actions/greeting'
 // Load Sass styles. Webpack takes care of the rest
 import "./../../styles/main.scss"
 
-export default class App extends Component {
+class App extends Component {
+
+  static propTypes = {
+    greeting: PropTypes.string,
+    timestamp: PropTypes.number
+  }
 
   componentDidMount() {
     const { greetingActions } = this.props
@@ -31,11 +36,6 @@ export default class App extends Component {
       </div>
     );
   }
-}
-
-App.propTypes = {
-  greeting: PropTypes.string,
-  timestamp: PropTypes.number
 }
 
 function mapStateToProps(state) {
