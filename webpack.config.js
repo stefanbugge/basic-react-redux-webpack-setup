@@ -8,7 +8,7 @@ module.exports = {
     target: "web",
     devtool: 'source-map',
     entry: {
-      main: "./src/entry.js" // This is the bundle of app code. 
+      main: "./src/entry.js" // This is the bundle of app code.
     },
     output: {
         path: buildPath,
@@ -24,7 +24,7 @@ module.exports = {
             }, // Images in Sass/css and js
             { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
             { // Transpile es6 and react-jsx resources
-                test: /\.js?$/,
+                test: /\.(js|jsx)?$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel',
                 query: {
