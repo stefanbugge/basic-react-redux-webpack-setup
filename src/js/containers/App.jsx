@@ -22,17 +22,25 @@ class App extends Component {
     greetingActions.makeGreeting("redux is working!")
   }
 
+  clickHandler(e) {
+    const { greetingActions } = this.props
+    greetingActions.makeGreeting("foo bar")
+  }
+
   render() {
     const { greeting, timestamp } = this.props
     return (
-      <div>
-        <h1>Hello from React</h1>
-        <p>
-          <span>Greeting from redux: <strong>{greeting}</strong></span>
-          <span> - { timestamp && moment(timestamp).format("HH:mm:ss")}</span>
-        </p>
-        <p>Type <strong>alt+h</strong> to see the redux devtools sidebar</p>
-        <p className="sass-test">If this is green then <strong>Sass</strong> is working as well</p>
+      <div className="row">
+        <div className="col-md-12">
+          <h1>Hello from React</h1>
+          <p>
+            <span>Greeting from redux: <strong>{greeting}</strong></span>
+            <span> - { timestamp && moment(timestamp).format("HH:mm:ss")}</span>
+          </p>
+          <p>Type <strong>alt+h</strong> to see the redux devtools sidebar</p>
+          <p className="sass-test">If this is green then <strong>Sass</strong> is working as well</p>
+          <button className="btn btn-primary" onClick={this.clickHandler.bind(this)}>Boostrap button</button>
+        </div>
       </div>
     );
   }
